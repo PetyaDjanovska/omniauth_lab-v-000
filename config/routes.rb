@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/new'
   get '/auth/facebook/callback' => 'sessions#create'
+  post '/users' => 'sessions#create'
 
   root 'welcome#home'
 
