@@ -10,9 +10,9 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
   end
 
-  private
+private
 
-def auth
-  request.env['omniauth.auth']
-end
+  def auth
+    request.env['omniauth.auth']
+  end
 end
